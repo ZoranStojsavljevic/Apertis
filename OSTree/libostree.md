@@ -1,0 +1,41 @@
+## libostree
+https://github.com/ostreedev/ostree
+
+### README.md
+
+This project is now known as "libostree", though it is still appropriate to use the
+previous name: "OSTree" (or "ostree"). The focus is on projects which use libostree's
+shared library, rather than users directly invoking the command line tools (except
+for build systems). However, in most of the rest of the documentation, we will use
+the term "OSTree", since it's slightly shorter, and changing all documentation at
+once is impractical. We expect to transition to the new name over time.
+
+As implied above, libostree is both a shared library and suite of command line tools
+that combines a "git-like" model for committing and downloading bootable filesystem
+trees, along with a layer for deploying them and managing the bootloader
+configuration.
+
+The core OSTree model is like git in that it checksums individual files and has a
+content-addressed-object store. It's unlike git in that it "checks out" the files
+via hardlinks, and they thus need to be immutable to prevent corruption. Therefore,
+another way to think of OSTree is that it's just a more polished version of Linux
+VServer hardlinks.
+
+Features:
+
+	Transactional upgrades and rollback for the system
+
+	Replicating content incrementally over HTTP via GPG signatures and "pinned
+		TLS" support
+		[What is TLS pinning? Transport Layer Security (TLS) certificate
+		pinning is a process that makes it possible to increase the security
+		of a site or some sort of service offered through a site.]
+
+	Support for parallel installing more than just 2 bootable roots
+
+	Binary history on the server side (and client)
+
+	Introspectable shared library API for build and deployment systems
+
+	Flexible support for multiple branches and repositories, supporting projects
+		like Flatpak which use libostree for applications, rather than hosts.

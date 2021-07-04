@@ -24,6 +24,32 @@ https://opensource.com/article/18/6/embedded-linux-build-tools
 ### The Apertis Platform
 https://www.apertis.org/architecture/platform-guide/
 
+![](images/apertis-functional-view.svg)
+
+#### Package-centric approach
+
+With Apertis, developers can focus on developing the components that provide their unique
+experience and rely on the shared core components and infrastructure for everything else.
+
+Apertis builds on the proven practice, used by Debian and many other major distributions,
+separating the compilation of individual components into binary packages from the
+composition of images destined for target devices. This package-centric approach is the
+key enabler at the center of all activities, tools and processes in Apertis. The selection
+and selective customization of these binary packages enables deployable images to be
+created quickly and efficiently for a variety of different products and product variants
+via automated processes.
+
+Basic workflow from source to image
+
+![](images/workflow_basic-source-to-image.svg)
+
+The Apertis infrastructure enables the resources for processes like compilation to be
+shared across all users, with changes to common components getting processed once and
+resulting binaries being shared with all. These resources are available to every team and
+since they are provided as a service they do not need to be duplicated for each developer.
+This ensures reproducibility, traceability and consistency during the whole product life
+cycle.
+
 #### Key Technologies
 
 Apertis makes heavy use of many open source technologies to form a strong platform:

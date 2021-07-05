@@ -23,6 +23,22 @@ available in OSTree images.
 
 Another differences TBD (To Be Determined) later in the game...
 
+#### The optional OSTree-based update mechanism
+
+The optional OSTree-based update mechanism provides an efficient and safe update
+facility for the base platform, such that updates can be deployed often with
+minimal costs. The guide and demonstration installation of hawkBit providing an
+example of how to implement fleet manangement.
+
+hawkBit using OSTree static deltas for OTA update 
+
+![](../images/ostree-hawkbit-static-deltas.svg)
+
+Applications can be deployed and updated in application bundles (with a new
+Flatpak-based solution on the way) without re-deploying the whole platform,
+decoupling the release and update cycle of the base software from that of each
+application.
+
 #### Updating the host with Apertis Update Manager (AUM)
 
 AUM has been added into Apertis starting from 18.12. It allows to do automatic

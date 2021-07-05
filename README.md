@@ -26,6 +26,22 @@ https://www.apertis.org/architecture/platform-guide/
 
 ![](images/apertis-functional-view.svg)
 
+#### The optional OSTree-based update mechanism
+
+The optional OSTree-based update mechanism provides an efficient and safe update
+facility for the base platform, such that updates can be deployed often with
+minimal costs. The guide and demonstration installation of hawkBit providing an
+example of how to implement fleet manangement.
+
+hawkBit using OSTree static deltas for OTA update
+
+![](images/ostree-hawkbit-static-deltas.svg)
+
+Applications can be deployed and updated in application bundles (with a new
+Flatpak-based solution on the way) without re-deploying the whole platform,
+decoupling the release and update cycle of the base software from that of each
+application.
+
 #### Package-centric approach
 
 With Apertis, developers can focus on developing the components that provide their unique
